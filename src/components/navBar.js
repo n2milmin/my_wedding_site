@@ -1,80 +1,90 @@
-import './navBar.css';
-import { NavLink, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import { IoClose, IoMenu } from "react-icons/io5";
-import { useState } from 'react';
+import "./navBar.css";
 
+const NavBar = () => {
+  const [showMenu, setShowMenu] = useState(false);
 
-const navBar = () => {
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
 
-    const [ menuOpen, setMenuOpen ] = useState(false)
-    const isMobile = useMediaQuery({ maxWidth: "1150px" });
-
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen)
+  const closeMenuOnMobile = () => {
+    if (window.innerWidth <= 1150) {
+      setShowMenu(false);
     }
+  };
+  return (
+    <header className="header">
+      <nav className="nav container">
+        <NavLink to="/" className="nav__logo">
+          Navigation Bar
+        </NavLink>
 
-    const closeMenuMobile = () => {
-        if (window.innerWidth <= 1150)
-            setShowMenu(false)
-    }
+        <div
+          className={`nav__menu ${showMenu ? "show-menu" : ""}`}
+          id="nav-menu"
+        >
+          <ul className="nav__list">
+            <li className="nav__item">
+              <NavLink to="/" className="nav__link" onClick={closeMenuOnMobile}>
+                Home
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                to="/news"
+                className="nav__link"
+                onClick={closeMenuOnMobile}
+              >
+                News
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                to="/about-us"
+                className="nav__link"
+                onClick={closeMenuOnMobile}
+              >
+                About Us
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                to="/favorite"
+                className="nav__link"
+                onClick={closeMenuOnMobile}
+              >
+                Favorite
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                to="/location"
+                className="nav__link"
+                onClick={closeMenuOnMobile}
+              >
+                Location
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink to="/get-started" className="nav__link nav__cta">
+                Get Started
+              </NavLink>
+            </li>
+          </ul>
+          <div className="nav__close" id="nav-close" onClick={toggleMenu}>
+            <IoClose />
+          </div>
+        </div>
 
-    const closeMobileView = () => {
-        if(isMobile)
-            setMenuOpen(false)
-    }
+        <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
+          <IoMenu />
+        </div>
+      </nav>
+    </header>
+  );
+};
 
-    const renderNavLinks = () => {
-        const listClassName = isMobile ? "nav_list" : "nav_list_web"
-    
-        return(
-            <ul className={ listClassName }>
-                    <li className='nav_list_item'>
-                        <NavLink to="/" className="nav_link" onClick={ closeMenuMobile }>Home</NavLink>
-                    </li>
-                    <li className='nav_list_item'>
-                        <NavLink to="/" className="nav_link" onClick={ closeMenuMobile }>RSVP</NavLink>
-                    </li>
-                    <li className='nav_list_item'>
-                        <NavLink to="/" className="nav_link" onClick={ closeMenuMobile }>Itinerary</NavLink>
-                    </li>
-                    <li className='nav_list_item'>
-                        <NavLink to="/" className="nav_link" onClick={ closeMenuMobile }>Registry</NavLink>
-                    </li>     
-                    <li className='nav_list_item'>
-                        <NavLink to="/" className="nav_link" onClick={ closeMenuMobile }>Acommidations & Directions</NavLink>
-                    </li>
-                    <li className='nav_list_item'>
-                        <NavLink to="/" className="nav_link" onClick={ closeMenuMobile }>Gallery</NavLink>
-                    </li>
-                </ul>
-        )
-    }
-
-
-    return (
-        <header className='header'>
-            <nav className={ 'nav_container &&{showMenu ? "showMenu" : "" }'}>
-                <NavLink to="/" className="nav_logo">Nicole & Tyler</NavLink>
-
-                {isMobile && (
-                    <div className="nav_toggle" id="nav-toggle" onClick={ toggleMenu }>
-                        <IoMenu />
-                    </div>
-                )}
-
-                {isMobile ? (
-                    <div className={ 'nav_menu ${ menuOpen ? "show-menu" : "" }'} id='nav-menu'>
-                        {renderNavLinks()}
-                        <div className="nav_close" id="nav-close" onClick={ toggleMenu }>
-                            <IoClose />
-                        </div>
-                    </div>
-                ) : (
-                    renderNavLinks()
-                )}
-            </nav>
-        </header>
-    )
-}
-
-export default navBar;
+export default NavBar;
