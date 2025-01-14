@@ -32,16 +32,6 @@
   cursor: pointer;
 }
 
-.nav__cta {
-  background-color: var(--first-color);
-  color: var(--title-color);
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  padding: 0.75rem 1.5rem;
-}
-
 @media screen and (max-width: 1150px) {
   .nav__menu {
     position: fixed;
@@ -91,7 +81,7 @@
 .show-menu {
   right: 0;
 }
-.nav__listt {
+.nav__list {
   display: flex;
   flex-direction: row;
   column-gap: 2.5rem;

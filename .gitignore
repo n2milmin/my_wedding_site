@@ -10,6 +10,7 @@
 
 # production
 /build
+clientId.txt
 
 # misc
 .DS_Store

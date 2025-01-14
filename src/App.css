@@ -1,3 +1,32 @@
 .App {
   text-align: center;
 }
+.main-content {
+  padding-top: 5rem;
+  padding-left: 1rem;
+}
+
+.home_container{ 
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  justify-content: center;
+}
+.home_img_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+}
+.home_content_container {
+  display: block;
+  max-width: 400px;
+  align-items: center;
+  justify-content: center;
+}
+.home_content_title {
+
+}
+.home_content_text {
+
+}

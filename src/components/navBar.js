@@ -65,7 +65,16 @@ const NavBar = () => {
                 className="nav__link"
                 onClick={closeMenuOnMobile}
               >
-                Acommidations & Directions
+                <p>Acommidations <br/> &nbsp; &nbsp; & Directions</p>
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                to="/RSVP"
+                className="nav__link"
+                onClick={closeMenuOnMobile}
+              >
+                Registry
               </NavLink>
             </li>
           </ul>
