@@ -19,7 +19,7 @@ const NavBar = () => {
     <header className="header">
       <nav className="nav container">
         <NavLink to="/" className="nav__logo">
-          Navigation Bar
+          Nicole & Tyler
         </NavLink>
 
         <div
@@ -52,20 +52,20 @@ const NavBar = () => {
             </li>
             <li className="nav__item">
               <NavLink
-                to="/acommidations"
-                className="nav__link"
-                onClick={closeMenuOnMobile}
-              >
-                Acommidations & Directions
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink
                 to="/gallery"
                 className="nav__link"
                 onClick={closeMenuOnMobile}
               >
                 Gallery
+              </NavLink>
+            </li>
+            <li className="nav__item">
+              <NavLink
+                to="/acommidations"
+                className="nav__link"
+                onClick={closeMenuOnMobile}
+              >
+                Acommidations & Directions
               </NavLink>
             </li>
           </ul>
