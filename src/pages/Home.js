@@ -1,16 +1,18 @@
 import '../App.css';
 import CountdownTimer from '../components/countdownTimer.js';
+import our_picture from '../ty_me_wedding_pic.jpg';
 
 const Home = () => {
 
     return (
         <div className='home_container'>
-
             <div className='home_img_container'>
                 {/* <svg className='home_our_img'>
                     <use ></use>
                 </svg> */}
-                <svg class="u-svg-link" 
+                <img className='our_img' src={our_picture} alt='Nicole & Tyler' />
+
+                <svg class="img_background" 
                     viewBox="0 0 160 160" 
                     x="0px" y="0px" id="svg-b9be" 
                     preserveAspectRatio='none'>

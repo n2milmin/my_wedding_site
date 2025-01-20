@@ -2,6 +2,11 @@
   "short_name": "React App",
   "name": "Create React App Sample",
   "icons": [
+    {
+      "src": "ty_n_me_wedding.png",
+      "type": "image/png",
+      "sizes": "773x773"
+    }
   ],
   "start_url": ".",
   "display": "standalone",
