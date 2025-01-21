@@ -1,0 +1,16 @@
+.footer{
+    display: flex;
+    bottom: 0;
+    justify-content: center;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.me{
+    color: var(--title-color);
+    transition: color 0.4s;
+}
+
+.me:hover{
+    color: var(--first-color);
+}
