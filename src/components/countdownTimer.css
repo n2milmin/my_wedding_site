@@ -4,24 +4,31 @@
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
     gap: 1rem;
     justify-content: center;
-    padding: 0.25rem;
-    max-width: 400px;
+    padding: 0.5rem;
+    max-width: 600px;
+    margin: 0 auto;
 }
 .countdown-value {
-    background-color: #662961;
+    background-color: #6A4C93;
     border-radius: 50%;
-    color: #ce03d5;
+    color: #F5E6E8;
     aspect-ratio: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    font-size: clamp(1.5rem, 5vw, 1.5rem);
+    font-size: clamp(1.5rem, 5vw, 2rem);
     font-weight: 700;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease;
 }
 .countdown-value:hover {
     transform: scale(1.05);
+}
+@media (max-width: 480px) {
+    .countdown-display {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
 }

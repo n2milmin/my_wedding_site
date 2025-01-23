@@ -1,45 +1,59 @@
-.App {
-  text-align: center;
-}
 .main-content {
-  padding-top: 5rem;
-  padding-left: 1rem;
+  padding-top: 6rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  /* border-top: 6rem solid var(--back-color); 
+  border-left: 3rem solid var(--back-color);
+  border-right: 3rem solid var(--back-color); */
 }
 
 .home_container{ 
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: center;
   justify-content: center;
+  background-color: var(--body-color);
+  padding: 2rem;
+  /* transition: transform 0.2s ease; */
 }
+
 .home_img_container {
   position: relative;
-  width: 94%;
+  width: 90%;
 }
-.image_background{
-  position: absolute;
+.image_background_container{
   top: 0;
   left: 0;
-  display: none;
+  fill: var(--back-color);
+}
+.image_background {
+  width: 100%;
 }
 .our_img{
   position: absolute;
   width: 85%;
-  top: 0;
   right: 0;
+  top: 25px;
   border-radius: 50%;
 }
 
 .home_content_container {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
   justify-content: center;
 }
 .home_content_title {
-  
+  padding: 1rem;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  color: var(--title-color);
 }
 .home_content_text {
-
+  padding: 0.5rem;
+  font-size: clamp(1rem, 5vw, 1.2rem);
+  color: #000000;
+}
+.countdown_container{
+  width: 100%;
 }

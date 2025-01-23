@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home.js";
 import NavBar from './components/navBar.js';
+import Footer from './components/footer.js';
 // import RSVP from "./pages/RSVP";
 // import Gallery from "./pages/Gallery.js/index.js";
 // import Registry from  "./pages/Registry";
@@ -10,7 +11,7 @@ import NavBar from './components/navBar.js';
 
 function App() {
   return (
-    <Router>
+    <Router className="App">
       <NavBar />
       <main className='main-content'>
         <Routes>
@@ -22,6 +23,7 @@ function App() {
           <Route path="/acommidations-directions" element={<Acommidations />} /> */}
         </Routes>
       </main>
+      <Footer />
     </Router>
   );
 }

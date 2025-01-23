@@ -2,9 +2,9 @@
 
 .header {
   position: fixed;
-  width: 100%;
+  width: 90%;
   top: 0;
-  left: 0;
+  left: 4rem;
   background-color: transparent;
   z-index: var(--z-fixed);
 }
@@ -60,6 +60,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 2.5rem;
+  font-size: 1.1rem;
 }
 
 .nav__link {
@@ -81,7 +82,7 @@
 .show-menu {
   right: 0;
 }
-.nav__list {
+.nav__listt {
   display: flex;
   flex-direction: row;
   column-gap: 2.5rem;

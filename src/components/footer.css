@@ -2,8 +2,9 @@
     display: flex;
     bottom: 0;
     justify-content: center;
-    padding: 20px;
-    background-color: transparent;
+    padding: 50px;
+    /* border-right: 3rem solid var(--back-color);  */
+    background-color: var(--body-color);
 }
 
 .me{
