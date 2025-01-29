@@ -68,6 +68,9 @@
   font-weight: var(--font-semi-bold);
   transition: color 0.4s;
 }
+.active {
+  color: var(--first-color);
+}
 
 .nav__link:hover {
   color: var(--first-color);
@@ -82,7 +85,7 @@
 .show-menu {
   right: 0;
 }
-.nav__listt {
+.nav__list {
   display: flex;
   flex-direction: row;
   column-gap: 2.5rem;

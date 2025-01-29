@@ -28,7 +28,9 @@ const NavBar = () => {
         >
           <ul className="nav__list">
             <li className="nav__item">
-              <NavLink to="/" className="nav__link" onClick={closeMenuOnMobile}>
+              <NavLink to="/" 
+              className="nav__link" 
+              onClick={closeMenuOnMobile} >
                 Home
               </NavLink>
             </li>
@@ -70,7 +72,7 @@ const NavBar = () => {
             </li>
             <li className="nav__item">
               <NavLink
-                to="/RSVP"
+                to="/Registry"
                 className="nav__link"
                 onClick={closeMenuOnMobile}
               >
