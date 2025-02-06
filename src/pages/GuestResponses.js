@@ -30,11 +30,13 @@ function GuestResponse() {
       </thead>
       <tbody>
         {
-          !message 
+          !message ? 
           // users.forEach(user => 
-          //   <tr>user.name</tr>
-          //   <tr>user.status</tr>
+            <tr>user.name </tr>
+            // <tr>user.status </tr>
           // })
+          : 
+          <tr>{message}</tr>
         }
       </tbody>
     </Table>
