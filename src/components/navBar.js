@@ -45,11 +45,11 @@ const NavBar = () => {
             </li>
             <li className="nav__item">
               <NavLink
-                to="/itinerary"
+                to="/details"
                 className="nav__link"
                 onClick={closeMenuOnMobile}
               >
-                Itinerary
+                Details
               </NavLink>
             </li>
             <li className="nav__item">
@@ -59,15 +59,6 @@ const NavBar = () => {
                 onClick={closeMenuOnMobile}
               >
                 Gallery
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink
-                to="/acommidations"
-                className="nav__link"
-                onClick={closeMenuOnMobile}
-              >
-                <p>Acommidations <br/> &nbsp; &nbsp; & Directions</p>
               </NavLink>
             </li>
             <li className="nav__item">
