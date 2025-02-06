@@ -1,41 +1,44 @@
 // page for only me to view as it will not have a link to it 
 // Use Table 
-/*
 import Table from 'react-bootstrap/Table';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-function BasicExample() {
+function GuestResponse() {
+  const { users, usersState } = useState([])
+  const { message, messageState } = useState("")
+  const API = ""
+
+  useEffect = async () => {
+    try{ 
+      usersState(await axios.get(""))
+      if(!users){
+        messageState("No data found")
+      }
+    } catch(e) {
+      messageState(e.message)
+    }
+  }
+
   return (
-    <Table striped bordered hover>
+    <Table classname=''>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Name</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
+        {
+          !message 
+          // users.forEach(user => 
+          //   <tr>user.name</tr>
+          //   <tr>user.status</tr>
+          // })
+        }
       </tbody>
     </Table>
   );
 }
 
-export default BasicExample;
-*/
+export default GuestResponse
