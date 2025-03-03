@@ -1,3 +1,24 @@
+import "../App.css";
+import axios from "axios";
+
+const Gallery = () => {
+  const album_url = "https://photos.app.goo.gl/iikhrYQdqMqMwTvg9"
+
+  
+
+  const handleClick = async () => {
+    const response = await axios.get(album_url)
+    console.log(response.data)
+  }
+  return (
+    <div>
+      <p onClick={handleClick}>Heyo</p>
+    </div>
+  )
+}
+
+export default Gallery;
+
 // Carousel ?? 
 /*
 const myCarouselEl = document.querySelector('#myCarousel')
