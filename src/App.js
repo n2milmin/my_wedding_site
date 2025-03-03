@@ -5,7 +5,7 @@ import Footer from './components/footer.js';
 // import RSVP from "./pages/RSVP";
 import Gallery from "./pages/Gallery.js";
 // import Registry from  "./pages/Registry";
-// import Acommidations from "./pages/Details.js/index.js";
+import Details from "./pages/Details.js";
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
           {/* <Route path="/rsvp" element={<RSVP />} /> */}
           <Route path="/gallery" element={<Gallery />} />
           {/* <Route path="/registry" element={<Registry />} />  */}
-          {/* <Route path="/details" element={<Details />} />  */}
+          <Route path="/details" element={<Details />} /> 
         </Routes>
       </main>
       <Footer />
