@@ -7,9 +7,6 @@ const Home = () => {
     return (
         <div className='home_container'>
             <div className='home_img_container'>
-                {/* <svg className='home_our_img'>
-                    <use ></use>
-                </svg> */}
                 <img className='our_img' src={our_picture} alt='Nicole & Tyler' />
 
                 <div className="image_background_container">
