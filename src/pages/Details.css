@@ -1,0 +1,41 @@
+.details_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-color);
+    min-height: 75vh;
+}
+
+h2{
+    justify-self: center;
+    padding: 20px;
+}
+
+p{
+    padding-bottom: 8px;
+    font-size: var(--mid-font-size);
+}
+
+.itenerary{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+}
+
+.action{
+    justify-items: right;
+}
+
+.time{
+    justify-items: right;
+    padding-right: 64%;
+}
+
+.middle{
+    top: 0;
+}
+
+.right{
+
+}
