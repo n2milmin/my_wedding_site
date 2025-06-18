@@ -2,6 +2,7 @@
   padding-top: 6rem;
   padding-left: 3rem;
   padding-right: 3rem;
+  min-height: 85vh;
   /* border-top: 6rem solid var(--back-color); 
   border-left: 3rem solid var(--back-color);
   border-right: 3rem solid var(--back-color); */
@@ -14,13 +15,11 @@
   align-items: center;
   justify-content: center;
   background-color: var(--body-color);
-  padding: 2rem;
-  /* transition: transform 0.2s ease; */
 }
 
 .home_img_container {
   position: relative;
-  width: 90%;
+  width: 84%;
 }
 .image_background_container{
   top: 0;
@@ -51,7 +50,8 @@
 }
 .home_content_text {
   padding: 0.5rem;
-  font-size: clamp(1rem, 5vw, 1.2rem);
+  /* font-size: clamp(1rem, 5vw, 1.2rem); */
+  font-size: var(--mid-font-size);
   color: #000000;
 }
 .countdown_container{
