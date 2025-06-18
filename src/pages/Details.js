@@ -64,12 +64,13 @@ const Details = () => {
             <div className="right">
                 <h2>Directions</h2>
                 <p>Cranberry Creek Gardens</p>
-                <p><Link onClick={ handleMaps() }>56 Lynedoch Road, Lynedoch (Delhi) ON N4B 2W4</Link></p>
+                <p><Link onClick={ handleMaps() }>56 Lynedoch Road, Lynedoch (Delhi) ON, N4B 2W4</Link></p>
                 <p>Note: this is an outdoor venue and you will be walking on <strong>GRASS</strong></p>
                 <br/>
                 <p>Best Western Little River Inn</p>
-                <p><Link onClick={ handleMaps() }>Location</Link></p>
+                <p><Link onClick={ handleMaps() }>203 Queens Way West, Simcoe, ON, N3Y 2M9</Link></p>
                 <p>15 minute drive from the venue</p>
+                <p>Please be mindful of noise levels when returning from the wedding</p>
                 </div>
         </div>
     )
