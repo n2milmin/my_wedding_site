@@ -65,8 +65,8 @@ const Details = () => {
                     <h2>Accomidations</h2>
                     <p>Best Western Litte River Inn</p> 
                     <p>
-                        <Link onClick={ handleHotel() }>Hotel link</Link>, &nbsp;
-                        <Link onClick={ handlePhone() }>Phone number</Link>
+                            <Link onClick={ handleHotel() } style={{color: 'blue'}}>Hotel link</Link>, &nbsp;
+                        <Link onClick={ handlePhone() } style={{color: 'blue'}}>Phone number</Link>
                     </p>
                     <p>Request "The Milmine & Parkins Wedding"</p> 
                     <p>Friday and Saturday nights available</p>
@@ -89,11 +89,11 @@ const Details = () => {
                 <div className='content'>
                     <h2>Directions</h2>
                     <p>Cranberry Creek Gardens</p>
-                    <p><Link onClick={ handleMaps() }>56 Lynedoch Road, Lynedoch ON, N4B 2W4</Link></p>
+                    <p><Link onClick={ handleMaps() } style={{color: 'blue'}}>56 Lynedoch Road, Lynedoch ON, N4B 2W4</Link></p>
                     <p>Note: this is an outdoor venue and you will be walking on <strong>GRASS</strong></p>
                     <br/>
                     <p>Best Western Little River Inn</p>
-                    <p><Link onClick={ handleMaps() }>203 Queens Way West, Simcoe, ON, N3Y 2M9</Link></p>
+                    <p><Link onClick={ handleMaps() } style={{color: 'blue'}}>203 Queens Way West, Simcoe, ON, N3Y 2M9</Link></p>
                     <p>15 minute drive from the venue</p>
                     {/* <p>Please be mindful of noise levels when returning from the wedding</p> */}
                 </div>
