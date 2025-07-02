@@ -1,8 +1,10 @@
-.main-content {
-  padding-top: 2rem;
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 1rem;
   padding-left: 3rem;
   padding-right: 3rem;
-  min-height: 100vh;
   border-left: 2rem solid var(--back-color); 
   border-right: 2rem solid var(--back-color); 
 }
@@ -18,11 +20,30 @@
   font-weight: var(--font-semi-bold) !important;
   font-size: var(--mid-font-size) !important;
 }
-.navlink:hover {
+.navlink:hover, a:hover { /* Applies to footer too */
   color: var(--first-color) !important;
 }
 .active {
   color: var(--first-color) !important;
 }
 
+/* Main content */
+.main-content {
+  flex: 1;
+}
+
 /* Footer */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 1rem;
+  max-width: 100%;
+  margin-top: auto;
+
+  > a {
+    text-decoration: none;
+    color: var(--title-color);
+  }
+}

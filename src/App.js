@@ -11,18 +11,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <Router className="App">
-      <main className='main-content'>
+    <Router>
+      <div className='App'>
         <NavBarComponent />
-        <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/rsvp" element={<RSVP />} />
-          <Route path="/gallery" element={<Gallery />} />
-          {/* <Route path="/registry" element={<Registry />} />  */}
-          <Route path="/details" element={<Details />} /> 
-        </Routes>
+        <main className='main-content'>
+          <Routes>
+            <Route path="/" element={<Home />}/>
+            <Route path="/rsvp" element={<RSVP />} />
+            <Route path="/gallery" element={<Gallery />} />
+            {/* <Route path="/registry" element={<Registry />} />  */}
+            <Route path="/details" element={<Details />} /> 
+          </Routes>
+        </main>
         <Footer />
-      </main>
+      </div>
     </Router>
   );
 }
