@@ -1,12 +1,14 @@
-import './footer.css';
-import { Link } from "react-router-dom";
+import '../App.css';
 
 const footer = () => {
     return(
         <div className="footer" >
-            <Link className='me' to={{ pathname: "https://github.com/n2milmin"}} target="_blank">
-                &copy;Nicole Milmine
-            </Link>
+            <a
+                href="https://nicole-6vhi.onrender.com/"
+                target='_blank'>
+                    &copy;Nicole Milmine
+            </a>
+            <a className='contact-me' href='mailto:nicoleamilmine@gmail.com'>Contact Me</a>
         </div>
     )
 }
