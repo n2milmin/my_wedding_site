@@ -1,4 +1,4 @@
-import '../App.css';
+import './Home.css';
 import CountdownTimer from '../components/countdownTimer.js';
 import our_picture from '../ty_me_wedding_pic.jpg';
 
