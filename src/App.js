@@ -1,27 +1,28 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from "./pages/Home.js";
-import NavBar from './components/navBar.js';
+import NavBarComponent from './components/navBar.js';
 import Footer from './components/footer.js';
-// import RSVP from "./pages/RSVP";
+import RSVP from "./pages/RSVP.js";
 import Gallery from "./pages/Gallery.js";
 // import Registry from  "./pages/Registry";
 import Details from "./pages/Details.js";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
   return (
     <Router className="App">
-      <NavBar />
       <main className='main-content'>
+        <NavBarComponent />
         <Routes>
           <Route path="/" element={<Home />}/>
-          {/* <Route path="/rsvp" element={<RSVP />} /> */}
+          <Route path="/rsvp" element={<RSVP />} />
           <Route path="/gallery" element={<Gallery />} />
           {/* <Route path="/registry" element={<Registry />} />  */}
           <Route path="/details" element={<Details />} /> 
         </Routes>
+        <Footer />
       </main>
-      <Footer />
     </Router>
   );
 }
