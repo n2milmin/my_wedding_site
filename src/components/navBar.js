@@ -1,87 +1,33 @@
-import React, { useState } from "react";
+import { Navbar, Nav, Container } from "react-bootstrap"
 import { NavLink } from "react-router-dom";
-import { IoClose, IoMenu } from "react-icons/io5";
-import "./navBar.css";
+import "../App.css";
 
-const NavBar = () => {
-  const [showMenu, setShowMenu] = useState(false);
+const NavbarComponent = () => {
 
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
-  const closeMenuOnMobile = () => {
-    if (window.innerWidth <= 1150) {
-      setShowMenu(false);
-    }
-  };
-  return (
-    <header className="header">
-      <nav className="nav container">
-        <NavLink to="/" className="nav__logo">
-          Nicole & Tyler
-        </NavLink>
-
-        <div
-          className={`nav__menu ${showMenu ? "show-menu" : ""}`}
-          id="nav-menu"
+  return(
+    <div>
+      <Container>
+        <Navbar 
+          className="navbar"
+          expand='lg'
+          sticky='top' 
         >
-          <ul className="nav__list">
-            <li className="nav__item">
-              <NavLink to="/" 
-              className="nav__link" 
-              onClick={closeMenuOnMobile} >
-                Home
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink
-                to="/RSVP"
-                className="nav__link"
-                onClick={closeMenuOnMobile}
-              >
-                RSVP
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink
-                to="/details"
-                className="nav__link"
-                onClick={closeMenuOnMobile}
-              >
-                Details
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink
-                to="/gallery"
-                className="nav__link"
-                onClick={closeMenuOnMobile}
-              >
-                Gallery
-              </NavLink>
-            </li>
-            <li className="nav__item">
-              <NavLink
-                to="/Registry"
-                className="nav__link"
-                onClick={closeMenuOnMobile}
-              >
-                Registry
-              </NavLink>
-            </li>
-          </ul>
-          <div className="nav__close" id="nav-close" onClick={toggleMenu}>
-            <IoClose />
-          </div>
-        </div>
+          <Navbar.Brand className="narbar-brand" as={NavLink} to="/">Nicole & Tyler</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
-        <div className="nav__toggle" id="nav-toggle" onClick={toggleMenu}>
-          <IoMenu />
-        </div>
-      </nav>
-    </header>
-  );
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className='ms-auto'>
+              <Nav.Link className="navlink" as={NavLink} to="/">Home</Nav.Link>
+              <Nav.Link className="navlink" as={NavLink} to="/RSVP">RSVP</Nav.Link>
+              <Nav.Link className="navlink" as={NavLink} to="/Details">Details</Nav.Link>
+              <Nav.Link className="navlink" as={NavLink} to="/Gallery">Gallery</Nav.Link>
+              <Nav.Link className="navlink" as={NavLink} to="/Registry">Registry</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </Container>
+    </div>
+  )
 };
 
-export default NavBar;
+export default NavbarComponent;
