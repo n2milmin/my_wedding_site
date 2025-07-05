@@ -1,3 +1,27 @@
+import { useState } from "react";
+import ModalComponent from "../components/modal"
+import { Button } from "react-bootstrap";
+
+const RSVP = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => {
+    setIsOpen(true)
+  }
+
+  return (
+    <div>
+      <h2>RSVP</h2>
+
+      <Button onClick={ handleOpen }>Open</Button>
+
+      { isOpen && <ModalComponent />}
+    </div>
+  )
+}
+
+export default RSVP;
+
 // Make it Modal?? 
 /* 
 const modal = new bootstrap.Modal('#myModal')
