@@ -4,14 +4,14 @@
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: center;
-  justify-content: center;
+  justify-items: center;
+  text-align: center; 
   background-color: var(--body-color);
 }
 
 @media screen and (max-width: 800px) { /* Changes from row to col when screen shrinks*/
   .home_container {
     grid-template-columns: 1fr; 
-    text-align: center; 
   }
 }
 
