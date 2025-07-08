@@ -1,73 +1,69 @@
 import { useState } from "react";
-import ModalComponent from "../components/modal"
-import { Button } from "react-bootstrap";
+import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 
 const RSVP = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [show, setShow] = useState(false);
+  const [validated, setValidated] = useState(false);
+  
+  const handleClose = () => setShow(false); // Make sure they know data isn't saved
+  const handleShow = () => setShow(true);
 
-  const handleOpen = () => {
-    setIsOpen(true)
+  const handleSubmit = (event) => {
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    setValidated(true);
   }
 
   return (
     <div>
       <h2>RSVP</h2>
 
-      <Button onClick={ handleOpen }>Open</Button>
+      <Button variant="primary" onClick={ handleShow }>Open</Button>
 
-      { isOpen && <ModalComponent />}
+      <Modal 
+        show={show}
+        onHide={ handleClose }
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header>
+          <Modal.Title>RSVP</Modal.Title>
+        </Modal.Header>
+
+        <Modal.Body>
+          <Form validated={validated} onSubmit={handleSubmit}>
+            {/* Way 1 */}
+            <Row>
+              <Col>
+                <Form.Control type="text" placeholder="First name"/>
+              </Col>
+              <Col>
+                <Form.Control type="text" placeholder="Last name"/>
+              </Col>
+            </Row>
+            {/* Way 2 */}
+            <Form.Group className="form" as={Row} controlId="form.input">
+              <Form.Label column sm={3} >Full Name</Form.Label>
+              <Form.Control as={Col} type="text"/>
+            </Form.Group>
+          </Form>
+        </Modal.Body>
+        
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>Cancel</Button>
+          <Button type="submit">Submit</Button>
+        </Modal.Footer>
+      </Modal>
     </div>
   )
 }
 
 export default RSVP;
 
-// Make it Modal?? 
-/* 
-const modal = new bootstrap.Modal('#myModal')
-
-<div class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        <p>One fine body&hellip;</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-
-// Big or small 
-<!-- Large modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Large modal</button>
-
-<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
-
-<!-- Small modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button>
-
-<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div class="modal-dialog modal-sm" role="document">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
-</div>
-
-
+/*
 // Toasts for success
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';

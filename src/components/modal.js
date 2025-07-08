@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Modal, Button} from "react-bootstrap";
+import { Modal, Button, Form } from "react-bootstrap";
 
 const ModalComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,6 @@ const ModalComponent = () => {
 
   return (
     <div>
-      <h2>RSVP</h2>
 
       <Button variant="primary" onClick={ handleOpen }>Open</Button>
 
