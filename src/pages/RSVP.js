@@ -4,9 +4,13 @@ import { Button, Modal, Form, Col, Row } from "react-bootstrap";
 const RSVP = () => {
   const [show, setShow] = useState(false);
   const [validated, setValidated] = useState(false);
+  const [guests, setGuests] = useState(0);
   
-  const handleClose = () => setShow(false); // Make sure they know data isn't saved
   const handleShow = () => setShow(true);
+  const handleClose = () => {
+    setShow(false);
+    setGuests(0)
+  } // Make sure they know data isn't saved
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
@@ -16,6 +20,9 @@ const RSVP = () => {
     }
     setValidated(true);
   }
+
+  const handleAddGuest = () => setGuests(guests + 1);
+  const handleRemoveGuest = () => setGuests(guests - 1);
 
   return (
     <div>
@@ -46,9 +53,23 @@ const RSVP = () => {
             </Row>
             {/* Way 2 */}
             <Form.Group className="form" as={Row} controlId="form.input">
-              <Form.Label column sm={3} >Full Name</Form.Label>
+              <Form.Label column sm={3}>Your Name</Form.Label>
               <Form.Control as={Col} type="text"/>
             </Form.Group>
+            {Array.from(Array(guests)).map((c, index) => {
+              return (
+                <Form.Group className="names" as={Row} controlId={"guest." + {index}}>
+                  <Form.Label column sm={3}>Guest {index + 1}</Form.Label>
+                  <Form.Control as={Col} type="text"/>
+                </Form.Group>
+              )
+            })}
+              { guests < 3 && 
+                <Button onClick={handleAddGuest} variant="secondary">Add Guest</Button> 
+              }
+              { guests > 0 &&
+                <Button onClick={handleRemoveGuest} variant="secondary">Remove Guest</Button>
+              }
           </Form>
         </Modal.Body>
         
