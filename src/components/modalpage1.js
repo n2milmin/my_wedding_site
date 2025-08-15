@@ -37,7 +37,13 @@ const Modalpage1 = () => {
             { guests > 0 &&
             <Button onClick={handleRemoveGuest} variant="secondary">Remove Guest</Button>
             }
-        </Form>
+
+            {/* <Form.Group className="attendance" controlId="attendance"> */}
+                <Form.Label>Attending</Form.Label>
+                <Form.Check type="radio" label="Yes" id="yes"/>
+                <Form.Check type="radio" label="No" id="no" />
+            {/* </Form.Group> */}
+         </Form>
     )
 }
 
