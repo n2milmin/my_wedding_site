@@ -22,11 +22,8 @@ const Modalpage1 = () => {
     return (
         <Form /* noValidate */ validated={validated} onSubmit={handleSubmit}>
             {/* Name */}
-            <Form.Group className="name" as={Row} controlId="name.input">
-                <Form.Label column sm={3}>Your Name</Form.Label>
-                <Col sm={9}>
-                    <Form.Control required type="text"/>
-                </Col>
+            <Form.Group className="name" controlId="name.input">
+                    <Form.Control required type="text" placeholder="Your Name"/>
                 {/* <Form.Control.Feedback>Looks good!</Form.Control.Feedback> */}
                 {/* <FormCheckInput id="name" type="text" /> */}
             </Form.Group>
