@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Form, Col, Row } from "react-bootstrap";
+import { Button, Form, Col, Row, InputGroup } from "react-bootstrap";
 import FormCheckInput from "react-bootstrap/esm/FormCheckInput";
 
 const Modalpage1 = () => {
@@ -23,9 +23,10 @@ const Modalpage1 = () => {
         <Form /* noValidate */ validated={validated} onSubmit={handleSubmit}>
             {/* Name */}
             <Form.Group className="name" controlId="name.input">
+                <InputGroup hasValidation>
                     <Form.Control required type="text" placeholder="Your Name"/>
-                {/* <Form.Control.Feedback>Looks good!</Form.Control.Feedback> */}
-                {/* <FormCheckInput id="name" type="text" /> */}
+                    <Form.Control.Feedback type="invalid">Name not found.</Form.Control.Feedback>
+                </InputGroup>
             </Form.Group>
 
             {/* Additional guests (partners / children) */}
