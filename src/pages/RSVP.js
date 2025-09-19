@@ -1,6 +1,6 @@
 import "./RSVP.css";
 import { useState } from "react";
-import { Button, Modal, Form, Col, Row, InputGroup } from "react-bootstrap";
+import { Button, Modal, Form, InputGroup } from "react-bootstrap";
 
 const RSVP = () => {
   const [show, setShow] = useState(false);
@@ -30,7 +30,12 @@ const RSVP = () => {
     <div>
       <h2>RSVP</h2>
 
-      <Button variant="primary" onClick={handleShow}>Open</Button>
+      <div className="content">
+        <p>You will only be able to complete the form ONCE. Please reach out if you must change any information.</p>
+        <p>Clicking Cancel will save your information only until the page is refreshed.</p>
+
+        <Button variant="primary" size="lg" onClick={handleShow}>RSVP</Button>
+      </div>
 
       <Modal
         show={show}
@@ -73,9 +78,9 @@ const RSVP = () => {
 
             {/* Attending radio btn */}
             <Form.Group className="mb-4" controlId="attendance.radio">
-              <Form.Label>Will you be attending?</Form.Label> <br />
-              <Form.Check inline type="radio" label="Yes" id="yes" />
-              <Form.Check inline type="radio" label="No" id="no" />
+                <Form.Label>Will you be attending?</Form.Label> <br />
+                <Form.Check name="attending" required inline type="radio" label="Yes"/>
+                <Form.Check name="attending" required inline type="radio" label="No"/>
             </Form.Group>
 
             {/* Meal Preference */}
