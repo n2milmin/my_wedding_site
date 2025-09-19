@@ -1,30 +1,37 @@
 import "./RSVP.css";
-import { useState } from "react";
-import { Button, Modal, Form, InputGroup } from "react-bootstrap";
+// import { useState } from "react";
+// import { Button, Modal, Form, InputGroup } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 const RSVP = () => {
-  const [show, setShow] = useState(false);
+  const form_url = "https://docs.google.com/forms/d/e/1FAIpQLSd2VEwaf-mNPmU3YAq2UADS2bH3nbfYQieRk-gYTDyjKSB43w/viewform"
+  // const [show, setShow] = useState(false);
 
-  const [validated, setValidated] = useState(false);
-  const [guests, setGuests] = useState(0);
+  // const [validated, setValidated] = useState(false);
+  // const [guests, setGuests] = useState(0);
 
-  const handleAddGuest = () => setGuests(guests + 1);
-  const handleRemoveGuest = () => setGuests(guests - 1);
+  // const handleAddGuest = () => setGuests(guests + 1);
+  // const handleRemoveGuest = () => setGuests(guests - 1);
 
-  const handleSubmit = (event) => {
-    const form = event.currentTarget;
-    if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
+  // const handleSubmit = (event) => {
+  //   const form = event.currentTarget;
+  //   if (form.checkValidity() === false) {
+  //     event.preventDefault();
+  //     event.stopPropagation();
+  //   }
 
-    setValidated(true);
+  //   setValidated(true);
+  // };
+
+  // const handleShow = () => setShow(true);
+  // const handleClose = () => {
+  //   setShow(false);
+  // } // Make sure they know data isn't saved
+
+  const handleShow = () => {
+    var win = window.open(form_url, '_blank');
+    win.focus();
   };
-
-  const handleShow = () => setShow(true);
-  const handleClose = () => {
-    setShow(false);
-  } // Make sure they know data isn't saved
 
   return (
     <div>
@@ -37,7 +44,7 @@ const RSVP = () => {
         <Button variant="primary" size="lg" onClick={handleShow}>RSVP</Button>
       </div>
 
-      <Modal
+      {/* <Modal 
         show={show}
         onHide={handleClose}
         backdrop="static"
@@ -49,7 +56,7 @@ const RSVP = () => {
 
         <Modal.Body>
           <Form noValidate validated={validated} onSubmit={handleSubmit}>
-            {/* Name */}
+            Name 
             <Form.Group className="mb-2" controlId="name.input">
               <InputGroup hasValidation>
                 <Form.Control required type="text" placeholder="Your Name" />
@@ -57,7 +64,7 @@ const RSVP = () => {
               </InputGroup>
             </Form.Group>
 
-            {/* Additional guests (partners / children) */}
+            Additional guests (partners / children) 
             {Array.from(Array(guests)).map((c, index) => {
               return (
                 <Form.Group className="mb-2" controlId={"guest." + { index }}>
@@ -67,7 +74,7 @@ const RSVP = () => {
               )
             })}
             <Form.Group className="mb-4 d-flex gap-2">
-              {/* Display add & remove guest buttons */}
+              Display add & remove guest buttons 
               {guests < 3 &&
                 <Button onClick={handleAddGuest} variant="secondary">Add Guest</Button>
               }
@@ -76,22 +83,22 @@ const RSVP = () => {
               }
             </Form.Group>
 
-            {/* Attending radio btn */}
+            Attending radio btn 
             <Form.Group className="mb-4" controlId="attendance.radio">
                 <Form.Label>Will you be attending?</Form.Label> <br />
                 <Form.Check name="attending" required inline type="radio" label="Yes"/>
                 <Form.Check name="attending" required inline type="radio" label="No"/>
             </Form.Group>
 
-            {/* Meal Preference */}
+            Meal Preference 
 
-            {/* Dietary Restrictions */}
+            Dietary Restrictions 
             <Form.Group className="mb-4" controlId="dietary.input">
               <Form.Label>Are there any dietary restrictions or allergies?</Form.Label>
               <Form.Control type="text" />
             </Form.Group>
 
-            {/* Song Request */}
+            Song Request 
             <Form.Group className="mb-5" controlId="songrequest.input">
               <Form.Label>Do you have a song request?</Form.Label>
               <Form.Control type="text" />
@@ -103,7 +110,7 @@ const RSVP = () => {
             </Form.Group>
           </Form>
         </Modal.Body>
-      </Modal>
+      </Modal> */}
     </div>
   )
 }
