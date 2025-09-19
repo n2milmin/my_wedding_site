@@ -1,4 +1,3 @@
-import "./RSVP.css";
 // import { useState } from "react";
 // import { Button, Modal, Form, InputGroup } from "react-bootstrap";
 import { Button } from "react-bootstrap";
@@ -37,10 +36,10 @@ const RSVP = () => {
     <div>
       <h2>RSVP</h2>
 
-      <div className="content">
-        <p>You will only be able to complete the form ONCE. Please reach out if you must change any information.</p>
-        <p>Clicking Cancel will save your information only until the page is refreshed.</p>
+      <p>You will only be able to complete the form ONCE. Please reach out if you must change any information.</p>
+      {/* <p>Clicking Cancel will save your information only until the page is refreshed.</p> */}
 
+      <div className="mt-5 text-center">
         <Button variant="primary" size="lg" onClick={handleShow}>RSVP</Button>
       </div>
 
