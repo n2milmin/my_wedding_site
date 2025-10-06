@@ -23,7 +23,8 @@ const Home = () => {
             <div className='home_content_container'>
                 <h2 className='home_content_title'>Nicole & Tyler</h2>
                 <p className='home_content_text'>
-                    Some text about how we're getting married.
+                    We're so excited to celebrate our wedding day with those we love (YOU). 
+                    You will be required to walk on grass. It is an open bar, but there will be no shots or doubles (venue rules). 
                 </p>
                 <div className='countdown_container'>
                     < CountdownTimer />
