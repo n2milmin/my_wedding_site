@@ -3,6 +3,12 @@ import CountdownTimer from '../components/countdownTimer.js';
 import our_picture from '../ty_me_wedding_pic.jpg';
 
 const Home = () => {
+    const form_url = "https://docs.google.com/forms/d/e/1FAIpQLSd2VEwaf-mNPmU3YAq2UADS2bH3nbfYQieRk-gYTDyjKSB43w/viewform"
+
+    const handleShow = () => {
+        var win = window.open(form_url, '_blank');
+        win.focus();
+    };
 
     return (
         <div className='home_container'>
@@ -28,6 +34,10 @@ const Home = () => {
                 </p>
                 <div className='countdown_container'>
                     < CountdownTimer />
+                </div>
+
+                <div>
+                    <button className="rsvp_btn" onClick={handleShow}>RSVP</button>
                 </div>
             </div>
         </div>

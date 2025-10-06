@@ -1,5 +1,5 @@
 /* Container */
-.home_container{ 
+.home_container { 
   display: grid;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -20,7 +20,7 @@
   width: 84%;
 }
 
-.image_background_container{
+.image_background_container {
   top: 0;
   left: 0;
   fill: var(--back-color);
@@ -30,7 +30,7 @@
   width: 100%;
 }
 
-.our_img{
+.our_img {
   position: absolute;
   width: 85%;
   right: 0;
@@ -57,6 +57,22 @@
   color: #000000;
 }
 
-.countdown_container{
+.countdown_container {
   width: 100%;
+}
+
+.rsvp_btn {
+  margin-top: 25%;
+  padding: 10px 25px;
+  font-size: x-large;
+  color: white;
+  background-color: #9f73de;
+  border-radius: 8px;
+  border: none;
+  box-shadow: none;
+  transition-duration: 0.3s;
+}
+
+.rsvp_btn:hover {
+  box-shadow: 0 8px 10px 0 gray;
 }
