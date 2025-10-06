@@ -62,7 +62,8 @@
 }
 
 .rsvp_btn {
-  margin-top: 25%;
+  margin-top: 25px;
+  margin-left: 15px;
   padding: 10px 25px;
   font-size: x-large;
   color: white;

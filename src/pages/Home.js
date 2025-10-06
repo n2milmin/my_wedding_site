@@ -4,9 +4,14 @@ import our_picture from '../ty_me_wedding_pic.jpg';
 
 const Home = () => {
     const form_url = "https://docs.google.com/forms/d/e/1FAIpQLSd2VEwaf-mNPmU3YAq2UADS2bH3nbfYQieRk-gYTDyjKSB43w/viewform"
+    const album_url = "https://photos.app.goo.gl/iikhrYQdqMqMwTvg9"
 
-    const handleShow = () => {
+    const handleForm = () => {
         var win = window.open(form_url, '_blank');
+        win.focus();
+    };
+    const handleAlbum = () => {
+        var win = window.open(album_url, '_blank');
         win.focus();
     };
 
@@ -37,7 +42,8 @@ const Home = () => {
                 </div>
 
                 <div>
-                    <button className="rsvp_btn" onClick={handleShow}>RSVP</button>
+                    <button className="rsvp_btn" onClick={handleForm}>RSVP</button>
+                    <button className='rsvp_btn' onClick={handleAlbum}>Share Photos</button>
                 </div>
             </div>
         </div>
