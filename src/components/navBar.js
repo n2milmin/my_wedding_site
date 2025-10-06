@@ -18,9 +18,9 @@ const NavbarComponent = () => {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className='ms-auto'>
               <Nav.Link className="navlink" as={NavLink} to="/">Home</Nav.Link>
-              <Nav.Link className="navlink" as={NavLink} to="/RSVP">RSVP</Nav.Link>
+              {/* <Nav.Link className="navlink" as={NavLink} to="/RSVP">RSVP</Nav.Link> */}
               <Nav.Link className="navlink" as={NavLink} to="/Details">Details</Nav.Link>
-              <Nav.Link className="navlink" as={NavLink} to="/Gallery">Gallery</Nav.Link>
+              {/* <Nav.Link className="navlink" as={NavLink} to="/Gallery">Gallery</Nav.Link> */}
               <Nav.Link className="navlink" as={NavLink} to="/Registry">Registry</Nav.Link>
             </Nav>
           </Navbar.Collapse>
