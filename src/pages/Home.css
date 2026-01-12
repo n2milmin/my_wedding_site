@@ -61,7 +61,7 @@
   width: 100%;
 }
 
-.rsvp_btn {
+.btn {
   margin-top: 25px;
   margin-left: 15px;
   padding: 10px 25px;
@@ -74,6 +74,6 @@
   transition-duration: 0.3s;
 }
 
-.rsvp_btn:hover {
+.btn:hover {
   box-shadow: 0 8px 10px 0 gray;
 }

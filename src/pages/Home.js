@@ -42,8 +42,8 @@ const Home = () => {
                 </div>
 
                 <div>
-                    <button className="rsvp_btn" onClick={handleForm}>RSVP</button>
-                    <button className='rsvp_btn' onClick={handleAlbum}>Share Photos</button>
+                    <button className="btn" onClick={handleForm}>RSVP</button>
+                    <button className='btn' onClick={handleAlbum}>Share Photos</button>
                 </div>
             </div>
         </div>
