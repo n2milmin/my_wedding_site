@@ -30,7 +30,7 @@ const Details = () => {
                             <p>CEREMONY</p>
                             <p>COCKTAIL HOUR</p>
                             <p>DINNER</p>
-                            <p>LETS PARTY</p>
+                            <p>LET'S PARTY</p>
                             <p>SNACKS</p>
                             <p>SHUTTLE</p>
                         </div>
@@ -51,7 +51,7 @@ const Details = () => {
 
             <div className="middle">
                 <div className='content'>
-                    <h2>Accomidations</h2>
+                    <h2>Accommodations</h2>
                     <p>Best Western Litte River Inn</p> 
                     <p>
                         <Link onClick={ handleHotel() } style={{color: 'purple'}}>Hotel link</Link>, &nbsp;
@@ -60,7 +60,7 @@ const Details = () => {
                     <p>Request "The Milmine & Parkins Wedding"</p> 
                     <p>Friday and Saturday nights available</p>
                     <p>Check-in: 3:00 pm</p>
-                    <p>Check-out: </p>
+                    <p>Check-out: 11:00 am</p>
                 </div>
             </div>
 
