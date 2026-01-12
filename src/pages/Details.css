@@ -5,67 +5,67 @@
     align-items: center;
     justify-items: center;
     background-color: var(--body-color);
+
+    h2{
+        justify-self: center;
+        padding: 22px;
+        color: var(--title-color);
+    }
+
+    p{
+        padding-bottom: 8px;
+        font-size: var(--mid-font-size);
+    }
+
+    .itenerary{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 45px;
+    }
+
+    .action{
+        justify-items: right;
+    }
+
+    .time{
+        padding-right: 45%;
+    }
+
+    .left{
+        background-color: var(--back-color);
+        border-radius: 50%;
+        min-width: 440px;
+        max-width: 500px;
+    }
+
+    .middle{
+        background-color: var(--back-color);
+        border-radius: 25%;
+        min-width: 440px;
+        max-width: 500px;
+    }
+
+    .right{
+        background-color: var(--back-color);
+        border-radius: 50%;
+        height: 95%;
+        min-height: 500px;
+        min-width: 440px;
+        max-width: 500px;
+    }
+
+    .content{
+        justify-items: center;
+        padding: 10px;
+    }
+
+    .image_background_container{
+        fill: var(--back-color);    
+    }
 }
 
 @media screen and (max-width: 800px) { /* Changes from row to col when screen shrinks*/
   .details_container {
     grid-template-columns: 1fr; 
   }
-}
-
-h2{
-    justify-self: center;
-    padding: 22px;
-    color: var(--title-color);
-}
-
-p{
-    padding-bottom: 8px;
-    font-size: var(--mid-font-size);
-}
-
-.itenerary{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 45px;
-}
-
-.action{
-    justify-items: right;
-}
-
-.time{
-    padding-right: 45%;
-}
-
-.left{
-    background-color: var(--back-color);
-    border-radius: 50%;
-    min-width: 440px;
-    max-width: 500px;
-}
-
-.middle{
-    background-color: var(--back-color);
-    border-radius: 25%;
-    min-width: 440px;
-    max-width: 500px;
-}
-
-.right{
-    background-color: var(--back-color);
-    border-radius: 50%;
-    height: 95%;
-    min-height: 500px;
-    min-width: 440px;
-    max-width: 500px;
-}
-
-.content{
-    justify-items: center;
-    padding: 10px;
-}
-
-.image_background_container{
-    fill: var(--back-color);    
 }
