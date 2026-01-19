@@ -27,7 +27,7 @@ const Registry = () => {
         <div className="fund">
           <h2>Help us Fund</h2>
           <p>As we already have an apartment, we don't necessarily need things. If you don't like any of the registry options, we'll also accept a contribution to our honeymoon or anything else you'd like us to spend it on (such as an experience or downpayment).</p>
-          <p>Putting this sounds so weird but if you wish to send an e-transfer, you can send it to tyler.parkins@yahoo.ca</p>
+          <p>Putting this sounds so weird but if you wish to send an e-transfer, you can send it to tyler.parkins@yahoo.com</p>
         </div>
       </div>
     </div>
