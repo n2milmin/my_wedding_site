@@ -10,7 +10,7 @@ const Details = () => {
         <div className="details_container">
             <div className="left">
                 <div className='content'>
-                    <h2>Itenerary</h2>
+                    <h2>Itinerary</h2>
                     <div className='itenerary'>
                         <div className='action'>
                             <p>HOTEL CHECK-IN</p>
@@ -40,7 +40,7 @@ const Details = () => {
             <div className="middle">
                 <div className='content'>
                     <h2>Accommodations</h2>
-                    <p>Best Western Litte River Inn</p> 
+                    <p>Best Western Little River Inn</p> 
                     <p>
                         <Link to={website} target='_blank' style={{color: 'purple'}}>Book Online</Link>, &nbsp;
                         Call: (833) 311-9043
