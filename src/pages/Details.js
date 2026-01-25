@@ -43,7 +43,7 @@ const Details = () => {
                     <p>Best Western Little River Inn</p> 
                     <p>
                         <Link to={website} target='_blank' style={{color: 'purple'}}>Book Online</Link>, &nbsp;
-                        Call: 519-426-6103
+                        Call: 519-426-2125
                     </p>
                     <p>Request "The Milmine & Parkins Wedding"</p> 
                     <p>Friday and Saturday nights available</p>
