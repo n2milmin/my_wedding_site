@@ -90,6 +90,10 @@ const Details = () => {
             <div className='second_right'>
                 <div className='content'>
                     <h2>Dress code</h2>
+                    <p>We're going for garden pary vibes. A natural yet whimsical vibe with pastel or earthy tones.</p>
+                    <p>The offical description would fit somewhere between Cocktail and Semi-Formal.</p>
+                    <p>We want you comfortable and not in stilettos.</p>
+                    <p>Seriously, no pointy shoes. We're in a garden.</p>
                 </div>
             </div>
         </div>
