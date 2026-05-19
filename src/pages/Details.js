@@ -5,6 +5,7 @@ const Details = () => {
     const website = "https://www.guestreservations.com/best-western-little-river-inn-simcoe/booking?utm_source=google&utm_medium=cpc&utm_campaign=973005509&gad_source=1&gad_campaignid=973005509&gbraid=0AAAAADiMQMZFf_n_7QfVyYB6wKMbkqWBK&gclid=CjwKCAjwx8nCBhAwEiwA_z__0ydXhOjtLTrHOhkT0SGKkv2oSMMXXzb9BwscVofgRr1-fJ3Sao1P3RoCfTsQAvD_BwE";
     const venue = "https://maps.app.goo.gl/jwPjpzKKsGUPkCMz6";
     const hotel = "https://maps.app.goo.gl/YUXGZZ3sojvkomZ39";
+    const guide = "https://online.flippingbook.com/view/258253979/";
 
     return(
         <div className="details_container">
@@ -67,12 +68,12 @@ const Details = () => {
 
             <div className='second_left'>
                 <div className='content'>
-                    <h2>Experience Norfolk County</h2>
+                    <h2>Activities</h2>
+                    <p><Link to={guide} target='_blank' style={{color: 'purple'}}>Experience Norfolk Guide</Link></p>
                     <p>
                         This online guide was created specifically to help tourists experience all Norfolk County has to offer.
                         From wineries to beaches, this guide can give you a better understanding at local attractions.
                     </p>
-                    <p><Link to={guide} target='_blank' style={{color: 'purple'}}>Experience Norfolk Guide</Link></p>
                 </div>
             </div>
         </div>
