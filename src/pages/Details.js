@@ -58,7 +58,7 @@ const Details = () => {
                     <h2>Directions</h2>
                     <p>Cranberry Creek Gardens</p>
                     <p><Link to={venue} target='_blank' style={{color: 'purple'}}>56 Lynedoch Road, Lynedoch ON, N4B 2W4</Link></p>
-                    <p>Note: You will be walking on <strong>GRASS</strong></p>
+                    <p><strong>Note: You will be walking on <u>GRASS</u></strong></p>
                     <br/>
                     <p>Best Western Little River Inn</p>
                     <p><Link to={hotel} target='_blank' style={{color: 'purple'}}>203 Queens Way West, Simcoe, ON, N3Y 2M9</Link></p>
@@ -68,12 +68,28 @@ const Details = () => {
 
             <div className='second_left'>
                 <div className='content'>
+                    <h2>Photography List</h2>
+                    <p>This is a list for the order of guest photos.</p>
+                    <p>You will have 10 minutes post-ceremony to go to the bathroom and get drinks.</p>
+                    <p>We ask that you are aware of your location in the list and do not wander far before your photos are done.</p>
+                    <p>Note: The list is currently incomplete but will be available at least 1 month prior to the wedding.</p>
+                </div>
+            </div>
+
+            <div className='second_middle'>
+                <div className='content'>
                     <h2>Activities</h2>
                     <p><Link to={guide} target='_blank' style={{color: 'purple'}}>Experience Norfolk Guide</Link></p>
                     <p>
                         This online guide was created specifically to help tourists experience all Norfolk County has to offer.
                         From wineries to beaches, this guide can give you a better understanding at local attractions.
                     </p>
+                </div>
+            </div>
+            
+            <div className='second_right'>
+                <div className='content'>
+                    <h2>Dress code</h2>
                 </div>
             </div>
         </div>
