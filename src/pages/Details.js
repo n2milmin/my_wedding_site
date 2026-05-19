@@ -74,7 +74,7 @@ const Details = () => {
                         You will have 10 minutes post-ceremony to go to the bathroom and get drinks.
                         We ask that you are aware of your location in the list and do not wander far before your photos are done.
                     </p>
-                    <p>Note: The list is currently incomplete but will be available at least 1 month prior to the wedding.</p>
+                    <p><i>Note:</i> The list is currently incomplete but will be available at least 1 month prior to the wedding.</p>
                 </div>
             </div>
 
