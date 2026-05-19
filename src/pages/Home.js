@@ -46,6 +46,10 @@ const Home = () => {
                     <button className='home_btns' onClick={handleAlbum}>Share Photos</button>
                 </div>
             </div>
+
+            <div classname="details_container">
+                <p>This is details_container</p>
+            </div>
         </div>
     )
 }
