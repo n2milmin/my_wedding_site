@@ -1,7 +1,7 @@
 .details_container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(2, minmax(440px, 1fr));
+    gap: 20px;
     align-items: center;
     justify-items: center;
     background-color: var(--body-color);
@@ -56,11 +56,39 @@
 
     .content{
         justify-items: center;
+        text-align: center;
         padding: 10px;
     }
 
     .image_background_container{
         fill: var(--back-color);    
+    }
+
+    .second_left{
+        grid-row: 2;
+        background-color: var(--back-color);
+        padding: 20px;
+        border-radius: 25%;
+        min-width: 440px;
+        max-width: 500px;
+    }
+
+    .second_middle{
+        grid-row: 2;
+        background-color: var(--back-color);
+        border-radius: 50%;
+        min-height: 375px;
+        min-width: 440px;
+        max-width: 500px;
+    }
+
+    .second_right{
+        grid-row: 2;
+        background-color: var(--back-color);
+        border-radius: 25%;
+        padding: 20px;
+        min-width: 440px;
+        max-width: 500px;
     }
 }
 

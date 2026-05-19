@@ -70,8 +70,10 @@ const Details = () => {
                 <div className='content'>
                     <h2>Photography List</h2>
                     <p>This is a list for the order of guest photos.</p>
-                    <p>You will have 10 minutes post-ceremony to go to the bathroom and get drinks.</p>
-                    <p>We ask that you are aware of your location in the list and do not wander far before your photos are done.</p>
+                    <p>
+                        You will have 10 minutes post-ceremony to go to the bathroom and get drinks.
+                        We ask that you are aware of your location in the list and do not wander far before your photos are done.
+                    </p>
                     <p>Note: The list is currently incomplete but will be available at least 1 month prior to the wedding.</p>
                 </div>
             </div>
