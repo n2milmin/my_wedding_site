@@ -64,6 +64,17 @@ const Details = () => {
                     <p>15 minute drive from the venue</p>
                 </div>
             </div>
+
+            <div className='second_left'>
+                <div className='content'>
+                    <h2>Experience Norfolk County</h2>
+                    <p>
+                        This online guide was created specifically to help tourists experience all Norfolk County has to offer.
+                        From wineries to beaches, this guide can give you a better understanding at local attractions.
+                    </p>
+                    <p><Link to={guide} target='_blank' style={{color: 'purple'}}>Experience Norfolk Guide</Link></p>
+                </div>
+            </div>
         </div>
     )
 }
